@@ -5,7 +5,8 @@ import MarkerClusterGroup from 'react-leaflet-cluster';
 import placeholderIcon from './icons/placeholder.png';
 import { Icon, divIcon, point } from 'leaflet';
 // import WellInfoButton from './components/button';
-
+// import { wells } from './Data';
+import { useSelector } from 'react-redux';
 // create custom icon
 const customIcon = new Icon({
 	iconUrl: placeholderIcon,
@@ -22,22 +23,10 @@ const createClusterCustomIcon = function (cluster) {
 };
 
 // markers;
-const markers = [
-	{
-		geocode: [48.86, 2.3522],
-		popUp: 'Hello, I am pop up 1',
-	},
-	{
-		geocode: [48.85, 2.3522],
-		popUp: 'Hello, I am pop up 2',
-	},
-	{
-		geocode: [48.855, 2.34],
-		popUp: 'Hello, I am pop up 3',
-	},
-];
 
 export default function App() {
+	const wells = useSelector((state) => state.wells1);
+	console.log(wells);
 	return (
 		// 48.8566, 2.3522
 		<MapContainer center={[48.8566, 2.3522]} zoom={13}>
@@ -49,7 +38,7 @@ export default function App() {
 				chunkedLoading
 				iconCreateFunction={createClusterCustomIcon}
 			>
-				{markers.map((marker) => (
+				{wells.map((marker) => (
 					<Marker position={marker.geocode} icon={customIcon} key={marker.id}>
 						<Popup key={`popup-${marker.id}`}>{marker.popUp}</Popup>
 					</Marker>
