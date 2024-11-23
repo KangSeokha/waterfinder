@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import WellInfoButton from './components/button';
 import WellGetButton from './components/get_button';
+import WellGetButton2 from './components/get_button2';
 // import ReadCSVButton from './components/read_csv';
 import App from './App';
 import { Provider } from 'react-redux';
@@ -23,6 +24,7 @@ root.render(
 			<WellInfoButton />
 			<WellGetButton />
 			{/* <ReadCSVButton /> */}
+			<WellGetButton2 />
 		</Provider>
 	</StrictMode>
 );

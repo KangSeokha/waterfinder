@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"start": "vite",
+		"start-frontend": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview"
@@ -15,6 +15,7 @@
 		"bootstrap": "^5.3.3",
 		"csv-parser": "^3.0.0",
 		"leaflet": "1.9.3",
+		"leaflet.markercluster": "^1.5.3",
 		"nodejs-polars": "^0.16.0",
 		"nodejs-polars-darwin-arm64": "^0.16.0",
 		"papaparse": "^5.4.1",
