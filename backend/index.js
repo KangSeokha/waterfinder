@@ -133,12 +133,10 @@ app.post('/create-well', async (req, res) => {
 	// Check if a well with the same WCRNUMBER already exists
 	const existingWell = await Well.findOne({ WCRNUMBER });
 	if (existingWell) {
-		return res
-			.status(400)
-			.json({
-				error: true,
-				message: 'A well with this WCRNUMBER already exists',
-			});
+		return res.status(400).json({
+			error: true,
+			message: 'A well with this WCRNUMBER already exists',
+		});
 	}
 
 	// Create a new well document
