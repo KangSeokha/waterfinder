@@ -37,9 +37,8 @@ app.get('/', (req, res) => {
 	res.json({ data: 'hello' });
 });
 
-app.get('/upload-csv', (req, res) => {
-	const csvFilePath =
-		'./ProcessedData/Processed_Well_Completion_Report_copy.csv';
+app.get('/read-csv', (req, res) => {
+	const csvFilePath = './ProcessedData/Processed_Well_Completion_Report.csv';
 
 	fs.readFile(csvFilePath, 'utf8', (err, data) => {
 		if (err) {

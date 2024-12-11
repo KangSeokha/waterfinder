@@ -19,7 +19,7 @@ const store = configureStore({
 root.render(
 	<StrictMode>
 		<Provider store={store}>
-			<h1>React Leaflet Tutorial</h1>
+			<h1>Well Locations</h1>
 			<App />
 			<WellInfoButton />
 			<WellGetButton />

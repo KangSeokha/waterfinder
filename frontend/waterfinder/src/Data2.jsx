@@ -2,7 +2,7 @@ import axiosInstance from './utils/axiosInstance';
 
 export const wellsFromCSV = async () => {
 	try {
-		const response = await axiosInstance.get('/upload-csv');
+		const response = await axiosInstance.get('/read-csv');
 		// const wells = response.data.wells;
 
 		// Optional: Log for debugging
